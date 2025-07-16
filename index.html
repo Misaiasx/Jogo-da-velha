@@ -7,11 +7,40 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="game-container">
-    <h1>Jogo da Velha</h1>
-    <div id="game-board" class="board"></div>
-    <p id="status" class="status">Vez do jogador: X</p>
-    <button id="reset-button">Reiniciar</button>
+  <main class="game-wrapper">
+    
+    <!-- Lado esquerdo: Vitória X -->
+    <img
+      id="winner-x-img"
+      class="winner-img"
+      src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXd0OWU4d2Q2dGgybmszcm4ybDZxeWNwY25hcml2cmtzc3NpcHhsZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LMn7PRCVDcnvO/giphy.gif"
+      alt="Vitória do jogador X"
+    />
+
+    <div class="game-container">
+      <h1>Jogo da Velha</h1>
+      <div id="game-board" class="board"></div>
+      <p id="status" class="status">Vez do jogador: X</p>
+
+      <!-- Empate (abaixo do tabuleiro) -->
+      <img
+        id="draw-img"
+        class="draw-img"
+        src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHRsMnFxZnFmbHJ6bnVudHg3ZDlqNHM1azltcjg5bW9oZDgxNzFqYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/142Y941q45XPdm/giphy.gif"
+        alt="Empate"
+      />
+
+      <button id="reset-button">Reiniciar</button>
+    </div>
+
+    <!-- Lado direito: Vitória O -->
+    <img
+      id="winner-o-img"
+      class="winner-img"
+      src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHo1ZmRsYjN0bWZ4Z3hmZG1jaHpxbHd0emswODhyODJ2b3p4ZTQ1aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12bjQ7uASAaCKk/giphy.gif"
+      alt="Vitória do jogador O"
+    />
+
   </main>
 
   <script src="script.js"></script>
