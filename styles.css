@@ -1,67 +1,81 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background: #f0f0f0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .game-container {
-    text-align: center;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-gap: 5px;
-    margin-bottom: 20px;
-  }
-  
-  .cell {
-    width: 100px;
-    height: 100px;
-    background: #fff;
-    font-size: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #333;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .cell:hover {
-    background: #eaeaea;
-  }
-  
-  .status {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background: #4caf50;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background: #45a049;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game-container {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabuleiro */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px auto;
+}
+
+/* Células */
+.cell {
+  background: white;
+  border: 2px solid #333;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Status e botão */
+.status {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #388e3c;
+}
+
+/* Imagens */
+.winner-img,
+.draw-img {
+  display: none;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.visible {
+  display: block;
+}
